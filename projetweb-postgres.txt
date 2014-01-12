@@ -1,0 +1,30 @@
+
+os : Linux mint 16 64-bit 
+
+installation de posgres sous linux
+apt-get install postgresql
+
+paquets installés
+libpq5 postgresql postgresql-9.1 postgresql-client-9.1 postgresql-client-common postgresql-common
+
+se logger en tant que "postgres" et changer son mpd
+ALTER USER postgres with password 'secure-password';
+
+ajouter un utilisateur
+create user "login" with encrypted password "passord";
+
+creer une base
+create database "nom" owner="login" encoding="utf-8";
+
+se logger
+su root
+su postgres
+psql
+
+ou
+
+psql -U postgres
+
+
+sources
+http://stackoverflow.com/questions/1471571/how-to-configure-postgresql-for-the-first-time
